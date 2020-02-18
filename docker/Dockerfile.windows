@@ -1,0 +1,10 @@
+FROM plugins/base:windows-amd64
+
+LABEL maintainer="Weslei Juan Moser Pereira <wesleimsr@gmail.com>" \
+  org.label-schema.name="Drone circleci" \
+  org.label-schema.vendor="Weslei Juan Moser Pereira" \
+  org.label-schema.schema-version="1.0"
+
+COPY release/drone-circleci.exe /drone-circleci.exe
+
+ENTRYPOINT [ "\\drone-circleci.exe" ]

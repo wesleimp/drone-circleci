@@ -1,6 +1,9 @@
 package main
 
 import (
+	"log"
+	"os"
+
 	"github.com/urfave/cli/v2"
 )
 
@@ -15,6 +18,7 @@ func main() {
 				Email: "wesleimsr@gmail.com",
 			},
 		},
+		Action: run,
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name:    "token",
@@ -35,38 +39,23 @@ func main() {
 				Name:    "branch",
 				Usage:   "Branch to build",
 				EnvVars: []string{"BRANCH"},
+				Value:   "master",
 			},
 		},
-		Action: run,
+	}
+
+	if err := app.Run(os.Args); err != nil {
+		log.Fatal(err)
 	}
 }
 
-type Plugin struct {
-	Token  string
-	User   string
-	Repo   string
-	Branch string
-}
-
-func (p *Plugin) Exec() error {
-	return nil
-}
-
 func run(c *cli.Context) error {
-	p := &Plugin{
+	p := Plugin{
 		Token:  c.String("token"),
-		User:   c.String("User"),
-		Repo:   c.String("Repo"),
+		User:   c.String("user"),
+		Repo:   c.String("repo"),
 		Branch: c.String("branch"),
 	}
 
 	return p.Exec()
 }
-
-// client := &circleci.Client{Token: "0b141a931d7563f426c70d07c731de9b8f8ee6b1"}
-
-// builds, _ := client.ListRecentBuildsForProject("wesleimp", "Traveller", "master", "", -1, 0)
-
-// for _, build := range builds {
-// fmt.Printf("%v - %d: %s\n", build.Reponame, build.BuildNum, build.Status)
-// }
