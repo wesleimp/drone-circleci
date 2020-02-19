@@ -1,2 +1,2 @@
-go build -a -tags netgo -o release/windows/amd64/drone-circleci.exe
-docker build --rm -t wesleimp/drone-circleci -f docker/Dockerfile.windows.1903.amd64 .
+go build -a -tags netgo -o release/linux/amd64/drone-circleci
+docker build --rm -t wesleimp/drone-circleci -f docker/Dockerfile.linux.amd64 .
