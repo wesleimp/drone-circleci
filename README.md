@@ -6,7 +6,7 @@ Drone plugin for trigger circleci builds. For the usage information and a listin
 
 ## Build
 
-Build the binary with the following commang commands:
+Build the binary with the following commands:
 
 ```sh
 $ go build
