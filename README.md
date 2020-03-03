@@ -28,9 +28,9 @@ Execute from the working directory:
 
 ```sh
 $ docker run --rm \
-    -e USER=octocat \
-    -e REPO=hello-world \
-    -e BRANCH=master \
-    -e TOKEN=key-85c40a295fbd2dd0dfd47c38d8ae11d5e \
+    -e PLUGIN_USER=octocat \
+    -e PLUGIN_REPO=hello-world \
+    -e PLUGIN_BRANCH=master \
+    -e PLUGIN_TOKEN=key-85c40a295fbd2dd0dfd47c38d8ae11d5e \
     wesleimp/drone-circleci
 ```

@@ -23,22 +23,22 @@ func main() {
 			&cli.StringFlag{
 				Name:    "token",
 				Usage:   "Access token",
-				EnvVars: []string{"TOKEN"},
+				EnvVars: []string{"PLUGIN_TOKEN"},
 			},
 			&cli.StringFlag{
 				Name:    "user",
 				Usage:   "Username",
-				EnvVars: []string{"USER"},
+				EnvVars: []string{"PLUGIN_USER"},
 			},
 			&cli.StringFlag{
 				Name:    "repo",
 				Usage:   "Repository name",
-				EnvVars: []string{"REPO"},
+				EnvVars: []string{"PLUGIN_REPO"},
 			},
 			&cli.StringFlag{
 				Name:    "branch",
 				Usage:   "Branch to build",
-				EnvVars: []string{"BRANCH"},
+				EnvVars: []string{"PLUGIN_BRANCH"},
 				Value:   "master",
 			},
 		},
