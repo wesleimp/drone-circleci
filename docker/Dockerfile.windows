@@ -1,8 +1,5 @@
 # escape=`
-FROM mcr.microsoft.com/windows/nanoserver:1809
-USER ContainerAdministrator
-
-ENV GODEBUG=netdns=go
+FROM microsoft/nanoserver:latest
 
 LABEL maintainer="Weslei Juan Moser Pereira <wesleimsr@gmail.com>" `
   org.label-schema.name="Drone circleci" `
