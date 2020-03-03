@@ -68,7 +68,7 @@ steps:
       from_secret: docker_password
     repo:
       from_secret: plugin_repo
-    dockerfile: Dockerfile
+    dockerfile: docker/Dockerfile
   when:
     event: [ tag, push ]
 
@@ -84,7 +84,7 @@ steps:
       from_secret: docker_password
     repo:
       from_secret: plugin_repo
-    dockerfile: Dockerfile.arm64
+    dockerfile: docker/Dockerfile.arm64
   when:
     event: [ tag, push ]
 
@@ -100,6 +100,6 @@ steps:
       from_secret: docker_password
     repo:
       from_secret: plugin_repo
-    dockerfile: Dockerfile.arm
+    dockerfile: docker/Dockerfile.arm
   when:
      event: [ tag, push ]
