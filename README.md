@@ -19,7 +19,7 @@ Build the Docker image with the following commands:
 ```sh
 $ GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -a -tags netgo -o release/linux/amd64/drone-circleci
 
-$ docker build --rm -t weslei/drone-circleci -f docker/Dockerfile .
+$ docker build --rm -t wesleimp/drone-circleci -f docker/Dockerfile .
 ```
 
 ## Usage
