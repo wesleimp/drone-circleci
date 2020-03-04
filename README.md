@@ -1,6 +1,7 @@
 # drone-circleci
 
 [![Build Status](https://cloud.drone.io/api/badges/wesleimp/drone-circleci/status.svg)](https://cloud.drone.io/wesleimp/drone-circleci)
+[![Go Report Card](https://goreportcard.com/badge/github.com/wesleimp/drone-circleci)](https://goreportcard.com/report/github.com/wesleimp/drone-circleci)
 
 Drone plugin for trigger circleci builds. For the usage information and a listing of the available options please take a look at [the docs](DOCS.md).
 
